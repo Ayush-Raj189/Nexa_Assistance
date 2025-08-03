@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 contacts = {
-    "ayush": "+919835237626",  # Replace with actual number
+    "ayush": "+919835237626",  
     "Ansh": "+919079231064",
     "Rahul":"+917410993211",
     "Priyansh":"+919571025342",
@@ -55,7 +55,7 @@ def set_volume_mute(mute=True):
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 newsapi = os.getenv("NEWS_API_KEY")
-# newsapi = "df7add71f6fd4d2a9e9cabe39c689c99"
+
 
 def get_location():
     try:
@@ -251,7 +251,7 @@ def processCommand(c):
             return
         city = match.group(2).strip().title()
         api_key = os.getenv("WEATHER_API_KEY")
-        # api_key = "ddf8839a809be4d0444b4a84ea1423e3"
+       
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
         try:
